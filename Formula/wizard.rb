@@ -5,23 +5,23 @@ class Wizard < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.5.1/wizard-aarch64-apple-darwin.tar.gz"
-      sha256 "75a41ca679ea4397b70d10a27fffe2e3ca25d6b838e380f7a7ac2a62ba874179"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.5.2/wizard-aarch64-apple-darwin.tar.gz"
+      sha256 "f9156c3936f7961ee8342957c9eb06b7d31a099bca0e420baf6a1c4b7bce869a"
     end
     on_intel do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.5.1/wizard-x86_64-apple-darwin.tar.gz"
-      sha256 "6d53c58c2c1fb6c487195468b93e2643aa98ec60932bf8416837972ab7e472f8"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.5.2/wizard-x86_64-apple-darwin.tar.gz"
+      sha256 "dede877ed8dc9a72664d9740d5075bb19d1df721e43612e1064fe8be5aeb77ea"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.5.1/wizard-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "f6786b2637b9add59c1bbc53a41e9ef8a2db26f19c32d03f15b1072a1f052424"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.5.2/wizard-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "47030ac010dc7b78326df97ffb0b01c8284f23709a9f99cf9a8ea82a7ae9df7f"
     end
     on_intel do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.5.1/wizard-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c6a46afde162205461ba3e26616731ca3468edaa032a8dabac289dfa8a1618e3"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.5.2/wizard-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ef807955edaafcb2132f825db592b337526815861128ff5653372b620727cebd"
     end
   end
 
@@ -30,6 +30,6 @@ class Wizard < Formula
   end
 
   test do
-    assert_match(/^wizard 3\.5\.1$/, shell_output("#{bin}/wizard --version"))
+    assert_match(/^wizard 3\.5\.2$/, shell_output("#{bin}/wizard --version"))
   end
 end
