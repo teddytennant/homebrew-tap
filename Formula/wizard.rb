@@ -5,31 +5,31 @@ class Wizard < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.1/wizard-aarch64-apple-darwin.tar.gz"
-      sha256 "2bed39d3546e6d51885eaf1d6baffc96a65d885369337305c2dac9d475d57cf0"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.3/wizard-aarch64-apple-darwin.tar.gz"
+      sha256 "6b1d94dda7ebe26d4d93ff592f9488b1dcefe45d6cd4d219b315b1f12af3f223"
     end
     on_intel do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.1/wizard-x86_64-apple-darwin.tar.gz"
-      sha256 "1f68326b5e644e232b45893ec6ebc7f479881fd31fcc1bc401d7402a55f3ae84"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.3/wizard-x86_64-apple-darwin.tar.gz"
+      sha256 "0f1dd00ed76a0c94c513fc0973c70225850bab02fcf33a54891552ff279035fa"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.1/wizard-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "d155581e6461b29882b31a0e52a41a8ade4ea1478fe3b1fa0aaed6b3a1b0d49e"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.3/wizard-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "7c773aca5c5ccf4f2789c33ae28cd65a4cf5fcea737556ad282211498818c19a"
     end
     on_intel do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.1/wizard-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ff49d3c1ecee50861fa8f7574324564e149d8f3755209eacaa46cea46dd9322e"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.3/wizard-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "513e949f6d4b7146eb850008766aed6eeeeaa290bf0144fbf007bfdea984e335"
     end
   end
 
   def install
-    bin.install "wizard"
+    bin.install "wizard", "wizard-ui-opencode", "wizard-ui-pi", "wizard-ui-codex", "wizard-ui-grok"
   end
 
   test do
-    assert_match(/^wizard 3\.8\.1$/, shell_output("#{bin}/wizard --version"))
+    assert_match(/^wizard 3\.8\.3$/, shell_output("#{bin}/wizard --version"))
   end
 end
