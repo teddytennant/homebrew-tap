@@ -5,31 +5,32 @@ class Wizard < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.8/wizard-aarch64-apple-darwin.tar.gz"
-      sha256 "4c5df54e2dbd4f50bb1a28dc9b6a6be1cb57e5a6ba6043dd52151dd22cc3e800"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.9/wizard-aarch64-apple-darwin.tar.gz"
+      sha256 "a4190051aa74bc70a20499e96c9d1ae2154529e95b4820fcf8e64f2788b07b53"
     end
     on_intel do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.8/wizard-x86_64-apple-darwin.tar.gz"
-      sha256 "c5e9996e505981dd75685ee7225cfbffed8d48ecf8d07b98092abda41ef99a4d"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.9/wizard-x86_64-apple-darwin.tar.gz"
+      sha256 "acd75a42d5b25ae215df25af342955a72828c63595d1acfe2297d73d1c192267"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.8/wizard-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "14ef0b077f6ef24f09c46ca5cba694cc6c1d2da050997845029aaa2bdaa1f6d6"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.9/wizard-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "edfa427ecf0417299dec97a443f866f478f6370e50a46f93d341744f60bf7925"
     end
     on_intel do
-      url "https://github.com/teddytennant/wizard/releases/download/v3.8.8/wizard-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2e1a1021da9243ad9d7b92d2d9729061d6372d2581c29eb95bab95e86583ceae"
+      url "https://github.com/teddytennant/wizard/releases/download/v3.8.9/wizard-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b5207365b1108535c46d0e63ddf9689eda03e1a93ad577c74919545c1649fb80"
     end
   end
 
   def install
-    bin.install "wizard", "wizard-ui-opencode", "wizard-ui-pi", "wizard-ui-codex", "wizard-ui-grok"
+    bin.install "wizard", "wizard-ui-opencode", "wizard-ui-pi", "wizard-ui-codex", "wizard-ui-grok",
+                "wizard-ui-jcode"
   end
 
   test do
-    assert_match(/^wizard 3\.8\.8$/, shell_output("#{bin}/wizard --version"))
+    assert_match(/^wizard 3\.8\.9$/, shell_output("#{bin}/wizard --version"))
   end
 end
